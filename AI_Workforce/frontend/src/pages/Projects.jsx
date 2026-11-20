@@ -144,7 +144,7 @@ function Projects() {
               <table className="w-full min-w-[640px]">
                 <thead><tr className="table-header">
                   <th className="px-6 py-3 text-left">Project Name</th><th className="px-6 py-3 text-left">Manager</th>
-                  <th className="px-6 py-3 text-left">Progress</th><th className="px-6 py-3 text-left">Status</th>
+                  
                   <th className="px-6 py-3 text-left">Created On</th>
                   <th className="px-6 py-3 text-right">Actions</th>
                 </tr></thead>
@@ -153,8 +153,8 @@ function Projects() {
                     <tr key={project.id} className="border-b border-border-light last:border-b-0">
                       <td className="px-6 py-4"><Link to={`/projects/${project.id}`} className="flex items-center gap-2 font-bold text-primary hover:underline"><Folder className="h-4 w-4 shrink-0" />{project.name}</Link></td>
                       <td className="px-6 py-4 text-text-primary">{project.manager || '—'}</td>
-                      <td className="px-6 py-4"><div className="w-36"><ProgressBar progress={project.progress || 0} showLabel size="sm" /></div></td>
-                      <td className="px-6 py-4"><StatusBadge status={project.status} /></td>
+                      
+                      
                       <td className="px-6 py-4 text-sm text-text-secondary">{project.created_at ? new Date(project.created_at).toLocaleDateString() : '—'}</td>
                       <td className="px-6 py-4 text-right">
                         <button
